@@ -1,11 +1,12 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
 import './App.css';
+import Home from './components/Home/Home';
 
 function App() {
   return (
-    <h1>Bienvenidos a la home</h1>
+   <Home/>
   );
 }
 
