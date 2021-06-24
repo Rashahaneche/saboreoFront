@@ -1,0 +1,10 @@
+.searchbar-container {
+    height: 77px;
+    background: #FFFFFF;
+}
+.searchbar-position {
+   border-radius: 50px;
+    text-align: center;
+    padding: 30px;
+   
+}
