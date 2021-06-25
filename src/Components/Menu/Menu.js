@@ -8,13 +8,13 @@ const Menu = () => {
       <div className="menu-container">
       
         <ul>
-          <li className="cocineros">
+          <li>
             <Link to="/cocineros">Cocineros</Link>
           </li>
-          <li className="Ingresar">
+          <li>
             <Link to="/ingresar">Ingresar</Link>
           </li>
-          <li className="Registro">
+          <li>
             <Link to="/registro">Registro</Link>
           </li>
           

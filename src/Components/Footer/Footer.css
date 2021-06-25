@@ -5,3 +5,10 @@
     border-radius: 0px;
     background-color: #76818E;
 }
+
+.text-footer{
+    font-family: Ropa Sans;
+    color: #fff;
+    list-style: none;
+    text-align: center;
+}
