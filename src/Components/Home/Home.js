@@ -9,25 +9,21 @@ const Home = () => (
   <section>
     <Header/>
     <SearchBar/>
-  <div className="main-div">
-    <div className="title">
-    <h1 > PLATOS POPULARES </h1>
+    <div className="main-div">
+      <div className="title">
+        <h1 > PLATOS POPULARES </h1>
+      </div>
+      <div className="card-div">
+        <Cards/>
+        <Cards/>
+        <Cards/>
+      </div>
     </div>
-    
-    <div className="card-div">
-    <Cards/>
-    <Cards/>
-    <Cards/>
+
+    <div>
+      <Footer/>
     </div>
-  </div>
-
-  <div>
-  <Footer/>
-  </div>
-
-    
   </section>
-
 );
-
 export default Home;
+

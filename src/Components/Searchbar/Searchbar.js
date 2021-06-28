@@ -15,5 +15,4 @@ const SearchBar = ({keyword,setKeyword}) => {
     </section>
   );
 }
-
 export default SearchBar;

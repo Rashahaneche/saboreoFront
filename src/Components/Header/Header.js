@@ -4,12 +4,16 @@ import {
 import saboreologo from '../../images/saboreologo.svg';
 import Menu from '../Menu/Menu';
 import './Header.css';
+import CartButton from '../CartButton/CartButton';
 
 const Header = () => {
     return (
         <header className="header">
-            <Link to="/"><div className="test"><img src={saboreologo} alt="svg" /></div></Link>
-            <Menu />
+            <Link to="/"><div className="logo"><img src={saboreologo} alt="svg" /></div></Link>
+            <div className="menuwrapper">
+                <Menu />
+                <CartButton />
+            </div>
         </header>
     );
 }

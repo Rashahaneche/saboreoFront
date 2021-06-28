@@ -1,27 +1,17 @@
 .menu-container {
     font-size: 16px;
-    line-height: 17px;
-    display:flex;
-    justify-content: flex-end;
-    list-style: none ;
     color: white;
 }
 
 .menu-container a{
     font-size: 16px;
-    height: 17px;
-    line-height: 17px;
-    display:flex;
     color: white;
-    list-style: none ;
     text-decoration: none;
-    flex-direction: row;
 }
 
 .menu-container li{
     display:inline-block;
     font-family: Ropa Sans;
     color: #fff;
-    list-style: none;
     padding: 10px;
 }

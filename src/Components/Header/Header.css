@@ -1,8 +1,15 @@
 .header {
     background-color:#223127;
     display: flex;
+    justify-content: space-between;
 }
-.test {
+.logo {
     display: inline-block;
     padding: 10px;
 }
+
+.menuwrapper {
+    display: flex;
+}
+
+
