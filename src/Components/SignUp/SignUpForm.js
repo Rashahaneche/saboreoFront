@@ -1,10 +1,15 @@
 import React from 'react';
+import axios from 'axios';
 import TextField from '@material-ui/core/TextField';
 import DefButton from '../Button/Button';
 
 
 const signUpForm = () => {
-      
+    
+    const createUser = () => {
+        axios.post ('http://localhost:3001/user/singin');
+    }
+
     return <div className = "formCont">
     <form>
      <div>
@@ -18,7 +23,7 @@ const signUpForm = () => {
           type="password"
           autoComplete="current-password"
           /><br />
-    <DefButton text= "Crear cuenta" />
+    <DefButton onClick={createUser} text= "Crear cuenta" />
     </div>
     </form>
     </div>
