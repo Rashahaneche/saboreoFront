@@ -4,7 +4,10 @@ import './App.css'
 import { ThemeProvider } from '@material-ui/core/styles';
 import SignUp from './Components/SignUp/SignUp';
 import SignIn from './Components/SignIn/SignIn';
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Home from './Components/Home/Home';
+import { BrowserRouter as Router,
+  Switch,
+  Route} from 'react-router-dom';
 
 function App() {
   return (
