@@ -6,8 +6,8 @@ import { BrowserRouter as Router,
 
 function App() {
   return (
-  <Router>
-    <Switch>
+<Router>
+  <Switch>
     <Route path="/">
       <Home />
     </Route>
