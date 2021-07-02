@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Menu.css'
-import ShoppingCartIcon from '../Cart/Cart'
+import './Menu.css';
 
 const Menu = () => {
   return (
@@ -11,10 +10,10 @@ const Menu = () => {
           <Link to="/cocineros">Cocineros</Link>
         </li>
         <li>
-          <Link to="/ingresar">Ingresar</Link>
+          <Link to="/signin">Ingresar</Link>
         </li>
         <li>
-          <Link to="/registro">Registro</Link>
+          <Link to="/signup">Registro</Link>
         </li>
       </ul>
     </div>
