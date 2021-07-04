@@ -5,7 +5,7 @@ const SearchBar = () => {
   const [keyword,setKeyword]= React.useState('')
   const handleSubmit = () => {
     console.log(keyword);
-    }
+  }
   return (
     <section className="searchbar-container">
       <div className="searchbar-position">
