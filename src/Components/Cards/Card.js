@@ -24,10 +24,10 @@ const Cards= (props) => {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            <h2>{props.title}</h2>
+            {props.title}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-          <p>{props.description}</p>
+            {props.description}
           </Typography>
         </CardContent>
       </CardActionArea>
