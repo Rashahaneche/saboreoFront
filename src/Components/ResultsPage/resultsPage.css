@@ -14,3 +14,7 @@
     height: 624px;
     background: #E8EAED;
 }
+.card-div {
+    display: flex;
+    justify-content: space-around;
+}

@@ -1,10 +1,12 @@
 import React from 'react';
-import './Searchbar.css'
+import './Searchbar.css';
+import { useHistory } from 'react-router-dom';
 
 const SearchBar = () => {
   const [keyword,setKeyword]= React.useState('')
+  const history= useHistory();
   const handleSubmit = () => {
-    console.log(keyword);
+   history.push(`/search?query=${keyword}`);
   }
   return (
     <section className="searchbar-container">

@@ -10,17 +10,14 @@ const Home = () => {
   const [dishes, setDishes] = React.useState([]);
   
   React.useEffect(() => {
-    axios.get('http://localhost:3000/dish/60da20c7fc389c6744d706dc')
+    axios.get('http://localhost:3000/dish/60e2f1b310c0438886eb05a3')
     .then(function (response) {
-      console.log(response);
       setDishes([response.data]) 
-      console.log(response.data);
     })
     .catch(function (error) {
       console.log(error);
     })
   },[])
-  console.log('Esta es la info:', dishes.name);
   return (
     
     <section>
