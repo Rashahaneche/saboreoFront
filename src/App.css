@@ -1,16 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -28,16 +19,47 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.formCont {
+  padding: 20px 50px 50px 50px;
+  margin: auto;
+  text-align: center;
+  background-color: white;
+  align-items: center;
+  border-radius: 20px;
+}
+.p_success {
+color:seagreen;
+font-family: "Ropa sans";
 }
 
-.test {
-  background-color: black;
+.p_error {
+  color:red;
+  font-family: "Ropa sans";
+}
 
+.MuiFormControl-root {
+  border: 0;
+  margin: 0;
+  display: inline-flex;
+  padding: 0 0 15px 0 !important;
+  position: relative;
+  min-width: 0;
+  flex-direction: column;
+  vertical-align: top;
+}
+
+.flex-SignUp {
+  display: flex;
+  flex-wrap: nowrap;
+  width:100%;
+  height:550px;
+  background-color: #E8EAED;
+}
+
+.SignUp-Image {
+  object-fit: fill;
+  float:left;
+  width:50%;
+  height:100%;
+  object-fit:cover;
 }

@@ -3,7 +3,7 @@ import SearchBar from '../Searchbar/Searchbar';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import "./Home.css"
-import Cards from '../Cards/Card';
+import Card from '../Cards/Card';
 import axios from 'axios';
 import Macarrones from '../../images/MacarronesConChorizo.jpeg'
 const Home = () => {

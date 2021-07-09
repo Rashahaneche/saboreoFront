@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
 .header {
     background-color:#223127;
     display: flex;
     justify-content: space-between;
+    font-family: 'Ropa sans';
 }
 .logo {
     display: inline-block;
