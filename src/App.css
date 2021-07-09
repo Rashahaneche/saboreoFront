@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
+
 .App {
   text-align: center;
 }
@@ -24,6 +26,15 @@
   background-color: white;
   align-items: center;
   border-radius: 20px;
+}
+.p_success {
+color:seagreen;
+font-family: "Ropa sans";
+}
+
+.p_error {
+  color:red;
+  font-family: "Ropa sans";
 }
 
 .MuiFormControl-root {

@@ -3,7 +3,7 @@ import TextField from '@material-ui/core/TextField';
 import DefButton from '../Button/Button';
 
 
-const signInForm = () => {
+const SignInForm = () => {
       
     return (
     <div className = "formCont">
@@ -23,4 +23,4 @@ const signInForm = () => {
     </div>
     )
 };
-export default signInForm()
+export default SignInForm

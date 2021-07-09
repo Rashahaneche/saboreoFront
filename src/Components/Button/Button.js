@@ -1,6 +1,7 @@
 import React from 'react';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import './Button.css'
 
 const theme = createMuiTheme({
   overrides: {
@@ -15,16 +16,16 @@ const theme = createMuiTheme({
         color: 'white',
         height: 48,
         padding: '0 30px',
-      },
+      }
     },
   },
 });
 
-function DefButton ({text='Introduce text'}) {
+function DefButton ({onClick, disabled=false, text='Introduce text'}) {
   
   return (
     <ThemeProvider theme={theme}>
-      <Button>{text}</Button>
+      <Button onClick={onClick} className={disabled && 'disabled-button espec'} disabled={disabled}>{text}</Button>
     </ThemeProvider>
   );
 }
