@@ -1,4 +1,4 @@
-import React from 'react';
+import React , { useEffect,useState } from 'react';
 import SearchBar from '../Searchbar/Searchbar';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
@@ -9,9 +9,9 @@ import Macarrones from '../../images/MacarronesConChorizo.jpeg';
 const ResultsPage = (props) => {
 let query = (new URLSearchParams(window.location.search)).get("query")
 
-const [dishes, setDishes] = React.useState([]);
+const [dishes, setDishes] = useState([]);
   
-  React.useEffect(() => {
+ useEffect(() => {
     axios.get('http://localhost:3000/dish/60e2f1b310c0438886eb05a3')
     .then(function (response) {
       setDishes([response.data]) 
