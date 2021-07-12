@@ -10,6 +10,9 @@
     background: #E8EAED;
 }
 .card-div {
-    display: flex;
+    display: flex!important;
+    flex-direction: row;
     justify-content: space-around;
+    min-width: 450px; 
+    flex-wrap: wrap;
 }
