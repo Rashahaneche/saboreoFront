@@ -15,7 +15,6 @@ const [dishes, setDishes] = useState([]);
  useEffect(() => {
     axios.get(`http://localhost:3000/dish?text=${query}`)
     .then(function (response) {
-      console.log(response);
       setDishes(response.data) 
     })
     .catch(function (error) {
