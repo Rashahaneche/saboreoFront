@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
 .card-class {
-    min-width: 450px;
+    min-width: 320px;
     display: flex;
     flex-direction: column;
+    margin: 10px;
+    border-radius: 20px !important;
+}
+.MuiTypography-gutterBottom {
+font-family: 'Ropa Sans' !important;
+font-size: 18px !important;
 }
