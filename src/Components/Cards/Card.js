@@ -11,7 +11,7 @@ import './Card.css'
 const Cards= (props) => {
 
   return (
-    <Card className='image-class'>
+    <Card className='card-class'>
       <CardActionArea>
         <CardMedia 
           component="img"

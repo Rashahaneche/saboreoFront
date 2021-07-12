@@ -1,3 +1,5 @@
-.image-class {
-    max-width: 300px;
+.card-class {
+    min-width: 450px;
+    display: flex;
+    flex-direction: column;
 }

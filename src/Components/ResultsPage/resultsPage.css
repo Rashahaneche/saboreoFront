@@ -1,0 +1,15 @@
+.title {
+    height: 32px;
+    font-family: Ropa Sans;
+    font-style: normal;
+    text-align:center;
+    padding: 30px;
+}
+.main-div {
+    height: 624px;
+    background: #E8EAED;
+}
+.card-div {
+    display: flex;
+    justify-content: space-around;
+}
