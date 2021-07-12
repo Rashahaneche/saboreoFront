@@ -13,7 +13,7 @@ let query = (new URLSearchParams(window.location.search)).get("query")
 const [dishes, setDishes] = useState([]);
   
  useEffect(() => {
-    axios.get(`http://localhost:3000/dish?text=${query}`)
+    axios.get(`http://localhost:3000/dish/?text=${query}`)
     .then(function (response) {
       setDishes(response.data) 
     })
