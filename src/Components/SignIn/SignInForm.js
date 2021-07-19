@@ -7,15 +7,24 @@ import { useHistory } from 'react-router-dom';
 
 
 const SignInForm = () => {
+    const [disabledButton, setDisabledButton] = useState(true);
+    const [welcome, setWelcome] = useState(false);
+    const [isNotUser, setIsNotUser] = useState(false);
+    const [isUser, setIsUser] = useState(false);
+    const [isError, setIsError] = useState(false);
     const initInfo = {
-        email: '',
+        nickname: '',
         password: ''
     }
+    const bugFixer = () => {
+        setIsNotUser(false)
+    }
     const validate = () => {
-        axios.get ()
+        axios.get ('http://localhost:3000user/verify/')
         .then(function(response) {
             console.log('Is a user');
             setIsUser(true);
+            setIsNotUser(false);
         })
         .catch(function (error) {
             console.log(error);
@@ -46,24 +55,19 @@ const SignInForm = () => {
       React.useEffect(()=>{
         setDisabledButton(!Object.values(inputInfo).every(field=>field.length)) 
     },[inputInfo]);
-    const [disabledButton, setDisabledButton] = useState(true)
-    const [welcome, setWelcome] = useState(false);
-    const [isNotUser, setIsNotUser] = useState(false);
-    const [isUser, setIsUser] = useState(false);
-    const [isError, setIsError] = useState(false);
 
     return (
     <div className = "formCont">
         <form>
             <div>
             <h2>Ingresa tus datos</h2>
-            <TextField  required id="standard-required" label="Email" defaultValue="" onChange={e => setInputInfo({email:e.target.value, password:inputInfo.password})} onBlur={validate}/><br />
+            <TextField  required id="standard-required" label="Nickname" defaultValue="" onBlur={validate} onFocus={bugFixer} onChange={e => setInputInfo({nickname:e.target.value, password:inputInfo.password})} /><br />
             <TextField  required
                 id="standard-password-input"
                 label="Contraseña"
                 type="password"
                 autoComplete="current-password"
-                onChange={e => setInputInfo({email:inputInfo.email, password:e.target.value})}
+                onChange={e => setInputInfo({nickname:inputInfo.nickname, password:e.target.value})}
                 /><br />
             <DefButton text= "Ingresar" disabled={disabledButton} onClick={logIn} />
             </div>
@@ -72,10 +76,10 @@ const SignInForm = () => {
             welcome && <p className="p_success">Nos encanta verte de nuevo</p>
             }
             {
-            isUser && <p className="p_success">Email registrado</p>
+            isUser && <p className="p_success">Usuario registrado</p>
             }
             {
-            isNotUser && <p className="p_error">Email no registrado</p>
+            isNotUser && <p className="p_error">Usuario no registrado</p>
             }
             {
             isError && <p className="p_error">Contraseña incorrecta</p>
