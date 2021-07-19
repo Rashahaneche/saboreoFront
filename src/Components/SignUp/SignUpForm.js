@@ -15,7 +15,6 @@ const initInfo = {
 const SignUpForm = () => {  
     const [isUserCreated, setIsUserCreated] = useState(false);
     const [isError, setIsError] = useState(false);
-    const [isError2, setIsError2] = useState(null);
     const [disabledButton, setDisabledButton] = useState(true);
     const [inputInfo, setInputInfo] = useState (initInfo)
     const history = useHistory();
@@ -38,13 +37,10 @@ const SignUpForm = () => {
             setInputInfo(initInfo);
           });
     }
-    const checkLow = () => {
-      const deny = /^[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/;
-      if( inputInfo.nickname.match(deny) ){
-        setIsError2(true);
-      }else{
-        setIsError2(false);
-      }
+    const limitText = (e) => {
+      const deny = /[!@#$·%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*/g;
+      const changed = e.target.value.toLowerCase().replaceAll(deny, '');
+      setInputInfo({name: inputInfo.name, surname:inputInfo.surname, nickname: changed, email:inputInfo.email, password:inputInfo.password }) 
       console.log(inputInfo.nickname);
     }
     React.useEffect(()=>{
@@ -56,11 +52,31 @@ const SignUpForm = () => {
             <form>
                 <div>
                 <h2>Ingresa tus datos</h2>
-                <TextField required id="standard-required" label="Nombre" value={inputInfo.name} onChange={e => setInputInfo({name: e.target.value, surname:inputInfo.surname, nickname: inputInfo.nickname, email:inputInfo.email, password:inputInfo.password }) }/><br />
-                <TextField  required id="standard-required" label="Apellidos" value={inputInfo.surname} onChange={e => setInputInfo({name:inputInfo.name, surname:e.target.value, nickname: inputInfo.nickname, email:inputInfo.email, password:inputInfo.password})}/><br />
-                <TextField required id="standard-required" label="Nickname" onBlur={checkLow} 
-                  value={inputInfo.nickname} onChange={e => setInputInfo({name: inputInfo.name, surname:inputInfo.surname, nickname: e.target.value.toLowerCase(), email:inputInfo.email, password:inputInfo.password }) }/><br />
-                <TextField  required id="standard-required" label="Email" type="email" value={inputInfo.email} onChange={e => setInputInfo({name:inputInfo.name, surname:inputInfo.surname, nickname: inputInfo.nickname, email:e.target.value, password:inputInfo.password})}/><br />
+                <TextField 
+                  required 
+                  id="standard-required" 
+                  label="Nombre" 
+                  value={inputInfo.name} 
+                  onChange={e => setInputInfo({name: e.target.value, surname:inputInfo.surname, nickname: inputInfo.nickname, email:inputInfo.email, password:inputInfo.password }) }/><br />
+                <TextField  
+                  required 
+                  id="standard-required" 
+                  label="Apellidos" 
+                  value={inputInfo.surname} 
+                  onChange={e => setInputInfo({name:inputInfo.name, surname:e.target.value, nickname: inputInfo.nickname, email:inputInfo.email, password:inputInfo.password})}/><br />
+                <TextField 
+                  required 
+                  id="standard-required" 
+                  label="Nickname" 
+                  value={inputInfo.nickname} 
+                  onChange={limitText}/><br />
+                <TextField  
+                  required 
+                  id="standard-required" 
+                  label="Email" 
+                  type="email" 
+                  value={inputInfo.email} 
+                  onChange={e => setInputInfo({name:inputInfo.name, surname:inputInfo.surname, nickname: inputInfo.nickname, email:e.target.value, password:inputInfo.password})}/><br />
                 <TextField  required
                     id="standard-password-input"
                     label="Contraseña"
@@ -76,9 +92,6 @@ const SignUpForm = () => {
             }
             {
             isError && <p className="p_error">Ha ocurrido un error</p>
-            }
-            {
-            isError2 && <p className="p_error">Nickname solo en letras minúsculas</p>
             }
          </div>
   )
