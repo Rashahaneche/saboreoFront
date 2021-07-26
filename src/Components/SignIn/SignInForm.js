@@ -20,11 +20,11 @@ const SignInForm = () => {
         setIsNotUser(false)
     }
     const validate = () => {
-        axios.get ('http://localhost:3000user/verify/')
+        axios.get (`http://localhost:3000/user/validate?nickname=${inputInfo.nickname}`)
         .then(function(response) {
-            console.log('Is a user');
-            setIsUser(true);
-            setIsNotUser(false);
+            console.log('hello', response.data)
+            if (response.data) setIsUser(true);
+             else setIsNotUser(true);
         })
         .catch(function (error) {
             console.log(error);
