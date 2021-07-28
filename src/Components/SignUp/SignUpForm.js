@@ -40,8 +40,7 @@ const SignUpForm = () => {
     const limitText = (e) => {
       const deny = /[!@#$·%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*/g;
       const changed = e.target.value.toLowerCase().replaceAll(deny, '');
-      setInputInfo({name: inputInfo.name, surname:inputInfo.surname, nickname: changed, email:inputInfo.email, password:inputInfo.password }) 
-      console.log(inputInfo.nickname);
+      setInputInfo({...inputInfo, nickname: changed }) 
     }
     React.useEffect(()=>{
         setDisabledButton(!Object.values(inputInfo).every(field=>field.length)) 
@@ -57,13 +56,13 @@ const SignUpForm = () => {
                   id="standard-required" 
                   label="Nombre" 
                   value={inputInfo.name} 
-                  onChange={e => setInputInfo({name: e.target.value, surname:inputInfo.surname, nickname: inputInfo.nickname, email:inputInfo.email, password:inputInfo.password }) }/><br />
+                  onChange={e => setInputInfo({...inputInfo, name: e.target.value }) }/><br />
                 <TextField  
                   required 
                   id="standard-required" 
                   label="Apellidos" 
                   value={inputInfo.surname} 
-                  onChange={e => setInputInfo({name:inputInfo.name, surname:e.target.value, nickname: inputInfo.nickname, email:inputInfo.email, password:inputInfo.password})}/><br />
+                  onChange={e => setInputInfo({...inputInfo, surname:e.target.value })}/><br />
                 <TextField 
                   required 
                   id="standard-required" 
@@ -76,13 +75,13 @@ const SignUpForm = () => {
                   label="Email" 
                   type="email" 
                   value={inputInfo.email} 
-                  onChange={e => setInputInfo({name:inputInfo.name, surname:inputInfo.surname, nickname: inputInfo.nickname, email:e.target.value, password:inputInfo.password})}/><br />
+                  onChange={e => setInputInfo({...inputInfo, email:e.target.value })}/><br />
                 <TextField  required
                     id="standard-password-input"
                     label="Contraseña"
                     type="password"
                     value={inputInfo.password}
-                    onChange={e => setInputInfo({name:inputInfo.name, surname:inputInfo.surname, nickname: inputInfo.nickname, email:inputInfo.email, password:e.target.value})}
+                    onChange={e => setInputInfo({...inputInfo, password:e.target.value})}
                     /><br />
                 <DefButton onClick={createUser} disabled={disabledButton} text= "Crear cuenta"/>
                 </div>
