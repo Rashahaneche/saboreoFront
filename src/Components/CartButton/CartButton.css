@@ -1,11 +1,11 @@
-.CartButton a{
+.CartButton a {
     text-decoration: none;
     color:white;
     align-self:center;
     padding: 10px;
 }
 
-.CartButton{
+.CartButton {
     display: flex;
 }
 

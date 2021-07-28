@@ -16,7 +16,21 @@
     background: #E8EAED;
 }
 
-.card-div {
+.carusel-div {
+    max-width: 1350px;
+    overflow:hidden;
+    margin: 0 auto;
+}
+
+.slider {
+    transition: all 1s;
     display: flex;
-    justify-content: space-around;
+    align-self: center;
+}
+
+.Carussel-Nav-Button{
+    display:flex;
+    justify-content:center;
+    padding: 50px;
+
 }
