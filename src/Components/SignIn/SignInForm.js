@@ -16,9 +16,6 @@ const SignInForm = () => {
         nickname: '',
         password: ''
     }
-    const bugFixer = () => {
-        setIsNotUser(false)
-    }
     const validate = () => {
         axios.get (`http://localhost:3000/user/validate?nickname=${inputInfo.nickname}`)
         .then(function(response) {
@@ -61,7 +58,12 @@ const SignInForm = () => {
         <form>
             <div>
             <h2>Ingresa tus datos</h2>
-            <TextField  required id="standard-required" label="Nickname" defaultValue="" onBlur={validate} onFocus={bugFixer} onChange={e => setInputInfo({nickname:e.target.value, password:inputInfo.password})} /><br />
+            <TextField  required 
+                id="standard-required" 
+                label="Nickname" defaultValue="" 
+                onBlur={validate} 
+                onFocus={() => setIsNotUser(false)} 
+                onChange={e => setInputInfo({nickname:e.target.value, password:inputInfo.password})} /><br />
             <TextField  required
                 id="standard-password-input"
                 label="Contraseña"
