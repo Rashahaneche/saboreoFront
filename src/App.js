@@ -7,12 +7,17 @@ import ResultsPage from './components/ResultsPage/ResultsPage';
 import SignUp from './components/SignUp/SignUp';
 import SignIn from './components/SignIn/SignIn';
 import Home from './components/Home/Home';
+
+// Contexto Login y autorizaciones
+import { AuthProvider } from './contexts/AuthContext';
+
 // import Cocineros from './Components/Cocineros/Cocineros';
 
 
 function App() {
   return (
 <ThemeProvider theme={theme}>
+<AuthProvider>
 <Router>
     <Switch>
     <Route exact path="/" component={Home} />
@@ -22,6 +27,7 @@ function App() {
     <Route path="/search" component={ResultsPage} />
   </Switch>
 </Router>
+</AuthProvider>
 </ThemeProvider>
   );
 }

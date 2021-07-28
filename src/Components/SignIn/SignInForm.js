@@ -5,12 +5,20 @@ import DefButton from '../Button/Button';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 
+import { useAuthContext } from '../../contexts/AuthContext'
+
+
 
 const SignInForm = () => {
+
+	// Llamanos al contexto
+	const AuthContext = useAuthContext();
+
     const initInfo = {
         email: '',
         password: ''
     }
+
     const validate = () => {
         axios.get ()
         .then(function(response) {
@@ -24,25 +32,29 @@ const SignInForm = () => {
     }
     const history = useHistory();
     const [inputInfo, setInputInfo] = useState(initInfo)
-      const logIn = () => {
-          console.log('INPUT', inputInfo);
-          axios.post ('http://localhost:3000/user/login', inputInfo)
-          .then(function (response) {
-            console.log('success');
-            setWelcome(true);
-            setInputInfo(initInfo);
-          })
-          .then (() => {setTimeout (()=> {
-              console.log('redirect');
-              history.push('/');
-            }, 2000); 
-            })
-          .catch(function (error) {
-            console.log(error);
-            setIsError(true);
-            setInputInfo(initInfo);
-          });
-      }
+	const logIn = () => {
+		axios.post ('http://localhost:3000/user/login', inputInfo)
+		.then(function (response) {
+			
+			// Pasamos datos a AuthContext
+			const {token, profile}	= response.data;
+			AuthContext.userLogin(token, profile);
+
+			console.log('success');
+			setWelcome(true);
+			setInputInfo(initInfo);
+		})
+		.then (() => {setTimeout (()=> {
+			console.log('redirect');
+			history.push('/');
+			}, 2000); 
+			})
+		.catch(function (error) {
+			console.log(error);
+			setIsError(true);
+			setInputInfo(initInfo);
+		});
+	}
       React.useEffect(()=>{
         setDisabledButton(!Object.values(inputInfo).every(field=>field.length)) 
     },[inputInfo]);

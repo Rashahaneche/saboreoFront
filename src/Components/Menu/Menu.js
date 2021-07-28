@@ -2,22 +2,48 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Menu.css';
 
+import { useAuthContext, AuthProvider } from '../../contexts/AuthContext'
+
 const Menu = () => {
-  return (
-    <div className="menu-container">
-      <ul>
-        <li>
-          <Link to="/cocineros">Cocineros</Link>
-        </li>
-        <li>
-          <Link to="/signin">Ingresar</Link>
-        </li>
-        <li>
-          <Link to="/signup">Registro</Link>
-        </li>
-      </ul>
-    </div>
-  );
+	
+	// Cargamos contexto
+	const authContext = useAuthContext();
+	
+	// Menu a mostrar si estas logeado.
+	if (authContext.userProfile) {
+		const userNickname = authContext.userProfile.nickname
+		return (
+			<div className="menu-container">
+			  <ul>
+				<li>
+				  <Link to="/cocineros">Cocineros</Link>
+				</li>
+				<li>
+					<Link to={`/user/${userNickname}`}>Perfil</Link>
+				</li>
+				<li>
+				  <Link onClick={authContext.userLogout} >Logout</Link>
+				</li>
+			  </ul>
+			</div>
+		  );
+	}
+
+	return (
+		<div className="menu-container">
+		<ul>
+			<li>
+			<Link to="/cocineros">Cocineros</Link>
+			</li>
+			<li>
+			<Link to="/signin">Ingresar</Link>
+			</li>
+			<li>
+			<Link to="/signup">Registro</Link>
+			</li>
+		</ul>
+		</div>
+	);
 }
 export default Menu;
 
