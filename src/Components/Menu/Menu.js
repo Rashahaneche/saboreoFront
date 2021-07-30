@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Menu.css';
+import './Menu.css'
 
 const Menu = () => {
   return (
@@ -10,10 +10,10 @@ const Menu = () => {
           <Link to="/cocineros">Cocineros</Link>
         </li>
         <li>
-          <Link to="/signin">Ingresar</Link>
+          <Link to="/ingresar">Ingresar</Link>
         </li>
         <li>
-          <Link to="/signup">Registro</Link>
+          <Link to="/registro">Registro</Link>
         </li>
       </ul>
     </div>

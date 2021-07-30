@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
 .Footer {
     height: 90px;
     left: 0px;
@@ -7,10 +6,9 @@
     background-color: #76818E;
 }
 
-.text-footer{
-    font-family: 'Ropa sans';
-    color: rgb(174, 190, 199);
+.text-footer {
+    font-family: Ropa Sans;
+    color: #fff;
     list-style: none;
     text-align: center;
-    padding: 35px;
 }

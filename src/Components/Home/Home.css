@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
 .title {
     height: 32px;
-    font-family: Ropa Sans;
+    font-family: 'Ropa Sans';
     font-style: normal;
     font-weight: normal;
-    font-size: 10px;
+    font-size: 14px;
     line-height: 32px;
     color: #223127; ;
     text-align:center;
@@ -17,20 +18,52 @@
 }
 
 .carusel-div {
-    max-width: 1350px;
+    max-width: 980px;
     overflow:hidden;
     margin: 0 auto;
+    position: relative;
 }
 
+.holder-div {
+    padding: 20px;
+}
 .slider {
     transition: all 1s;
     display: flex;
     align-self: center;
 }
+.rightButton {
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    z-index: 100;
+}
 
-.Carussel-Nav-Button{
-    display:flex;
-    justify-content:center;
-    padding: 50px;
+.leftButton {
+    position: absolute;
+    left: 2%;
+    top: 50%;
+    z-index: 100;
+}
 
+.forced {
+    color: white;
+    font-size: 8px !important;
+    border: 0;
+    height: 24px;
+    padding: 0 6px;
+    background: #eeeeee;
+    border-radius: 7px;
+}
+
+@media (max-width: 1060px) {
+    .carusel-div {
+        max-width: 660px; 
+    } 
+}
+
+@media (max-width: 670px) {
+    .carusel-div {
+        max-width: 350px; 
+    } 
 }

@@ -2,8 +2,13 @@
     height: 32px;
     font-family: Ropa Sans;
     font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 32px;
+    color: #223127; ;
     text-align:center;
     padding: 30px;
+   
 }
 .main-div {
     height: 624px;
@@ -11,8 +16,5 @@
 }
 .card-div {
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
-    min-width: 450px; 
-    flex-wrap: wrap;
 }
