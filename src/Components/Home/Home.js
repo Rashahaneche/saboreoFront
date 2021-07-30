@@ -6,6 +6,8 @@ import Footer from '../Footer/Footer';
 import "./Home.css"
 import Cards from '../Cards/Card';
 import Macarrones from '../../images/MacarronesConChorizo.jpeg'
+import leftButton from './left.svg';
+import rightButton from './right.svg'
 const Home = () => {
   const [currentSliderOffset, setCurrentSliderOffset] = React.useState(0);
   const [dishes, setDishes] = useState([]);
@@ -13,8 +15,8 @@ const Home = () => {
   const move = direction => {
     console.log('current', currentSliderOffset);
     if (currentSliderOffset === 0 && direction === 'left') return;
-    if (currentSliderOffset < (dishes.length-4)*(-450) && direction === 'right') return;
-    const offset = 450 * (direction === 'right' ? -1 : 1);
+    if (currentSliderOffset < (dishes.length-4)*(-320) && direction === 'right') return;
+    const offset = 320 * (direction === 'right' ? -1 : 1);
     console.log('offset', offset);
     setCurrentSliderOffset(currentSliderOffset + offset)
   }
@@ -37,7 +39,10 @@ const Home = () => {
         <div className="title">
           <h1>PLATOS POPULARES</h1>
         </div>
+        <div>
+          <img alt="leftButton" src={leftButton} id="ourLeft" className='leftButton' onClick={()=> move("left")}></img>
         <div className="carusel-div">
+          <div className="holder-div">
           <div id="slider" className="slider" style={{transform:`translateX(${currentSliderOffset}px)`}}>  
               {dishes.length && dishes.map(dish => <Cards 
                 key= {dish._id}
@@ -47,11 +52,10 @@ const Home = () => {
                 />)}
           </div>
         </div>
-        <div className="Carussel-Nav-Button">
-            <button id="ourLeft" onClick={()=> move("left")}>Move left</button>
-            <button id="outButton" onClick={()=> move("right")}>Move right</button>
         </div>
       </div>
+          <img alt="rightButton" src={rightButton} id="outButton" className='rightButton' onClick={()=> move("right")}></img>
+          </div>
       <div>
         <Footer/>
       </div>

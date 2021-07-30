@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Menu.css';
+import './Menu.css'
 
 import { useAuthContext, AuthProvider } from '../../contexts/AuthContext'
 
@@ -41,7 +41,6 @@ const Menu = () => {
 		</ul>
 		</div>
 	)
-	
 }
 export default Menu;
 
