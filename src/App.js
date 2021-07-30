@@ -5,9 +5,15 @@ import { BrowserRouter as Router,
   Switch,
   Route} from 'react-router-dom';
 
+// Contexto Login y autorizaciones
+import { AuthProvider } from './contexts/AuthContext';
+
+// import Cocineros from './Components/Cocineros/Cocineros';
 
 function App() {
   return ( 
+<ThemeProvider theme={theme}>
+<AuthProvider>
 <Router>
   <Switch>
     <Route path="/search" component={ResultsPage}>
@@ -17,6 +23,8 @@ function App() {
     </Route>
   </Switch>
 </Router>
+</AuthProvider>
+</ThemeProvider>
   );
 }
 
