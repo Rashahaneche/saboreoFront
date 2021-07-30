@@ -1,6 +1,9 @@
 import React from 'react';
 import Home from './components/Home/Home';
 import ResultsPage from './components/ResultsPage/ResultsPage';
+import { ThemeProvider } from '@material-ui/core/styles';
+import theme from './theme/saboTheme';
+
 import { BrowserRouter as Router,
   Switch,
   Route} from 'react-router-dom';
