@@ -10,26 +10,23 @@ const Menu = () => {
 	const authContext = useAuthContext();
 	
 	// Menu a mostrar si estas logeado.
-	if (authContext.userProfile) {
-		const userNickname = authContext.userProfile.nickname
-		return (
-			<div className="menu-container">
+
+	return(
+		authContext.userProfile ?
+		<div className="menu-container">
 			  <ul>
 				<li>
 				  <Link to="/cocineros">Cocineros</Link>
 				</li>
 				<li>
-					<Link to={`/user/${userNickname}`}>Perfil</Link>
+					<Link to={`/user/${authContext.userProfile.nickname}`}>Perfil</Link>
 				</li>
 				<li>
 				  <Link onClick={authContext.userLogout} >Logout</Link>
 				</li>
 			  </ul>
-			</div>
-		  );
-	}
-
-	return (
+		</div>
+		:
 		<div className="menu-container">
 		<ul>
 			<li>
@@ -43,7 +40,8 @@ const Menu = () => {
 			</li>
 		</ul>
 		</div>
-	);
+	)
+	
 }
 export default Menu;
 

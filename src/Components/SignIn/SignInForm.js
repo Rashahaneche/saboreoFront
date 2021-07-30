@@ -22,11 +22,9 @@ const SignInForm = () => {
     const validate = () => {
         axios.get ()
         .then(function(response) {
-            console.log('Is a user');
             setIsUser(true);
         })
         .catch(function (error) {
-            console.log(error);
             setIsNotUser(true);
         })
     }
@@ -39,18 +37,14 @@ const SignInForm = () => {
 			// Pasamos datos a AuthContext
 			const {token, profile}	= response.data;
 			AuthContext.userLogin(token, profile);
-
-			console.log('success');
 			setWelcome(true);
 			setInputInfo(initInfo);
 		})
 		.then (() => {setTimeout (()=> {
-			console.log('redirect');
 			history.push('/');
 			}, 2000); 
 			})
 		.catch(function (error) {
-			console.log(error);
 			setIsError(true);
 			setInputInfo(initInfo);
 		});
