@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
+
+.initialAdd {
+    font-family: 'Ropa Sans';
+    font-size: 18px;
+    background-color:#223127;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    border-width: 0px;
+    min-width: 90px;
+}
+
+.counterAdd {
+    background-color:#223127;
+    color: white;
+    border-radius: 30px;
+    min-width: 90px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}

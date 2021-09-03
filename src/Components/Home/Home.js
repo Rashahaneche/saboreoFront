@@ -7,7 +7,8 @@ import "./Home.css"
 import Cards from '../Cards/Card';
 import Macarrones from '../../images/MacarronesConChorizo.jpeg'
 import leftButton from './left.svg';
-import rightButton from './right.svg'
+import rightButton from './right.svg';
+import WelcomeImg from '../WelcomeImg/Welcome';
 const Home = () => {
   const [currentSliderOffset, setCurrentSliderOffset] = React.useState(0);
   const [dishes, setDishes] = useState([]);
@@ -35,6 +36,7 @@ const Home = () => {
     <section>
       <Header/>
       <SearchBar/>
+      <WelcomeImg/>
       <div className="main-div">
         <div className="title">
           <h1>PLATOS POPULARES</h1>
@@ -49,6 +51,7 @@ const Home = () => {
                 title={dish.name}
                 description= {dish.description}
                 image={Macarrones}
+                price={dish.price}
                 />)}
           </div>
         </div>
