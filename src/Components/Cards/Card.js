@@ -14,13 +14,9 @@ const Cards= (props) => {
       <CardActionArea>
         <CardMedia 
           component="img"
-          alt={props.title}
           height="140"
           image={props.image}
           title={props.title}
-          description={props.description}
-          _id={props._id}
-          price={props.price}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">

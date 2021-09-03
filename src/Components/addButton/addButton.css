@@ -4,7 +4,7 @@
     font-family: 'Ropa Sans';
     font-size: 18px;
     background-color:#223127;
-    color: white;
+    color: #FFFFFF;
     border-radius: 20px;
     padding: 10px;
     border-width: 0px;
@@ -13,7 +13,7 @@
 
 .counterAdd {
     background-color:#223127;
-    color: white;
+    color: #FFFFFF;
     border-radius: 30px;
     min-width: 90px;
     display: flex;
