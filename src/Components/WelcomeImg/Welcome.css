@@ -1,0 +1,22 @@
+.WelcomeImage {
+    background-image: url("./welcome.jpg");
+    height: 500px; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+}
+
+.textTitle {
+    color: #FFFFFF;
+    text-align: center;
+    padding-top: 200px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.textDescrp {
+    color: #FFFFFF;
+    text-align: center;
+    padding-left: 80px;
+    padding-right: 80px;
+}
