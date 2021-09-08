@@ -1,0 +1,8 @@
+.main-div-user{
+    height: 624px;
+    background:white;
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
