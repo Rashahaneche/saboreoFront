@@ -69,7 +69,8 @@ const MyDishes = (props) => {
                     
                 </div>: null}
             </div>
-            : null }
+            : null
+        }
         </section>
     )
 }
