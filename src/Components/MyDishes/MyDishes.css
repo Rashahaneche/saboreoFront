@@ -1,0 +1,14 @@
+.myDishesContainer{
+    height: 500px;
+    width: 500px;
+    background-color: tomato;
+    overflow: hidden;
+}
+.myDishes-carusel-div {
+    max-width: 500px;
+    margin: 0 auto;
+    transition: all 1s;
+    display: flex;
+    align-self: center;
+}
+
