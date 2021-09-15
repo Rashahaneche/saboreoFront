@@ -38,6 +38,10 @@ export default function DialogSelect() {
     setOpen(false)
   }
 
+  const onEdited = () => {
+    setIsVisible(false)
+  }
+
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -76,7 +80,7 @@ export default function DialogSelect() {
           </Button>
         </DialogActions>
       </Dialog>
-      {isVisible && <DishEdit id={dishId}/>}
+      {isVisible && <DishEdit id={dishId} onEdited={onEdited}/>}
     </div>
   );
 }
