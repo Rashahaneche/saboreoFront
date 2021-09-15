@@ -28,7 +28,7 @@ export const AuthProvider = ({children}) => {
 		}
 		setUserToken(token)
 		setLoading(false)
-		setUserProfile(profile)
+		setUserProfile(JSON.parse(profile))
 	 }, [])
 
 	const userLogin = (token, profile) => {
