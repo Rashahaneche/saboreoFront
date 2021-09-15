@@ -35,6 +35,7 @@ export default function DialogSelect() {
 
   const openModal = () => {
     setIsVisible(true)
+    setOpen(false)
   }
 
   const handleClickOpen = () => {
