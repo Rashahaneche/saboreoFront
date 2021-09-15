@@ -50,6 +50,7 @@ const MyDishes = (props) => {
                 key= {dish._id}
                 title={dish.name}
                 description= {dish.description}
+                price={dish.price}
                 image={Macarrones}
                 />)
                 :
