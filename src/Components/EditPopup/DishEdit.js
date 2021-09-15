@@ -4,12 +4,14 @@ import TextField from '@material-ui/core/TextField';
 import DefButton from '../Button/Button';
 import "./DishEdit.css"
 
-const DishEdit= ({id}) => {
+const DishEdit= ({id, onEdited}) => {
 const [dish, setDish] = useState({
     name:"",
     description:"",
     price:""
 });
+
+
 console.log(dish);
 useEffect(() => {
     axios.get(`http://localhost:3000/dish/${id}`)
@@ -25,13 +27,12 @@ useEffect(() => {
 const postDish = () =>{
     axios.post(`http://localhost:3000/dish/${id}`,dish)
     .then(function (response) {
-        console.log('success');
+        onEdited()
       })
     .catch(function (error) {
         console.log(error);
       });
 }
-console.log(dish);
 
 return (
 
