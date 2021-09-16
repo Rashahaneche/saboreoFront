@@ -1,8 +1,8 @@
 .myDishesContainer{
     height: 500px;
     width: 500px;
-    background-color: tomato;
     overflow: hidden;
+    background: #E8EAED;  
 }
 .myDishes-carusel-div {
     max-width: 500px;

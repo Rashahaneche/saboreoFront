@@ -1,7 +1,7 @@
 .userCardContainer{
-    height: 450px;
+    height: 500px;
     width: 450px;
-    background-color: blue;
+    background:#E8EAED;
 }
 .topCard{
     height: 150px;

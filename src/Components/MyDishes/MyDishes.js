@@ -13,8 +13,8 @@ const MyDishes = (props) => {
   const move = direction => {
     console.log('current', currentSliderOffset);
     if (currentSliderOffset === 0 && direction === 'left') return;
-    if (currentSliderOffset <= (dishes.length-1)*(-450) && direction === 'right') return;
-    const offset = 450 * (direction === 'right' ? -1 : 1);
+    if (currentSliderOffset <= (dishes.length-1)*(-320) && direction === 'right') return;
+    const offset = 320 * (direction === 'right' ? -1 : 1);
     console.log('offset', offset);
     console.log('Lenght', dishes.length);
     setCurrentSliderOffset(currentSliderOffset + offset)
