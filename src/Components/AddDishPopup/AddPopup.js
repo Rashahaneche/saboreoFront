@@ -8,7 +8,7 @@ import Checkbox from "@material-ui/core/Checkbox";
 import ReactDOM from "react-dom";
 import UploadImage from './ImageUpload/UploadImages';
 
-const user={}
+
 
 const newDishInfo = {
     name: '',
@@ -18,19 +18,19 @@ const newDishInfo = {
     vegan: 'No',
 	  glutenFree:'No',
 	  tags : '',
-	  seller : {user}
+	  seller : "60e2edb5a4927b86a9d4446c"
   };
 
-  
+  console.log("hola", newDishInfo);
   const AddDish = () => {  
       const [isDishCreated, setIsDishCreated] = useState(false);
       const [isError, setIsError] = useState(false);
       const [disabledButton, setDisabledButton] = useState(true);
       const [inputInfo, setInputInfo] = useState (newDishInfo)
       const history = useHistory();
+      console.log(inputInfo);
       const createDish = () => {
           axios.post ('http://localhost:3000/dish/', inputInfo)
-  
             .then(function (response) {
               console.log('success');
               setIsDishCreated(true);
@@ -80,7 +80,7 @@ const newDishInfo = {
     <Checkbox/> Vegano <br/>
     <Checkbox/> Glutten Free <br/>  
     <UploadImage/>   
-                  <DefButton onClick={createDish} disabled={disabledButton} text= "Añadir plato"/>
+                  <DefButton onClick={createDish} text= "Añadir plato"/>
                   </div>
               </form>
               {
