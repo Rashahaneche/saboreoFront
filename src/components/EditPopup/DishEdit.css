@@ -1,0 +1,11 @@
+.modal{
+    position:fixed;
+    float: left;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 500px;
+    width: 500px;
+    z-index: 900px;
+    background-color: brown;
+}

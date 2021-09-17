@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
+.title {
+    height: 32px;
+    font-family: 'Ropa Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 32px;
+    color: #223127; ;
+    text-align:center;
+    padding: 30px;
+   
+}
+
+.main-div {
+    height: 624px;
+    background: #E8EAED;
+    position: relative;
+}
+
+.carusel-div {
+    max-width: 980px;
+    overflow:hidden;
+    margin: 0 auto;
+    position: relative;
+}
+
+.holder-div {
+    padding: 20px;
+}
+.slider {
+    transition: all 1s;
+    display: flex;
+    align-self: center;
+}
+.rightButton {
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    z-index: 100;
+}
+
+.leftButton {
+    position: absolute;
+    left: 2%;
+    top: 50%;
+    z-index: 100;
+}
+
+.forced {
+    color: white;
+    font-size: 8px !important;
+    border: 0;
+    height: 24px;
+    padding: 0 6px;
+    background: #eeeeee;
+    border-radius: 7px;
+}
+
+@media (max-width: 1060px) {
+    .carusel-div {
+        max-width: 660px; 
+    } 
+}
+
+@media (max-width: 730px) {
+    .carusel-div {
+        max-width: 350px; 
+    } 
+}

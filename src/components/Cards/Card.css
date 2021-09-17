@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
+.card-class {
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    border-radius: 20px !important;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+.MuiTypography-gutterBottom {
+font-family: 'Ropa Sans' !important;
+font-size: 18px !important;
+}
+
+.MuiCardActions-root {
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.price {
+    font-size: 35px;
+    color: #223127;
+    font-family: 'Ropa Sans';
+}

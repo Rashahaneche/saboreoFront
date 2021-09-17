@@ -1,0 +1,11 @@
+.userCardContainer{
+    height: 500px;
+    width: 450px;
+    background:#E8EAED;
+}
+.topCard{
+    height: 150px;
+}
+.mainCardinfo{
+font-size: 2em;
+}
